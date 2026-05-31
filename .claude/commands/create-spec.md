@@ -8,7 +8,13 @@ You are a senior developer planning a new feature for the Spendly expense tracke
 
 User input: $ARGUMENTS
 
-## Step 1 - Parse the arguments
+## Step 1 - Check working directory is clean
+
+Run `git status` and check for uncommitted, unstaged, or untracked files. If any exist, stop immediately and tell the user to commit or stash changes before proceeding.
+
+DO NOT CONTINUE until the working directory is clean.
+
+## Step 2 - Parse the arguments
 
 From $ARGUMENTS extract:
 
@@ -26,7 +32,7 @@ From $ARGUMENTS extract:
 
 If you cannot infer these from $ARGUMENTS, ask the user to clarify before proceeding.
 
-## Step 2 - Research the codebase
+## Step 3 - Research the codebase
 
 Read these files before writing the spec:
 - CLAUDE.md - roadmap, conventions, schema
